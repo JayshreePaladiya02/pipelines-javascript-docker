@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jayshreepaladiyapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jayshreepaladiyapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jayshreepaladiyapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jayshreepaladiyapipelinesjavascriptdocker 
+          image: jaypalcontainerregistry.azurecr.io/jayshreepaladiyapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
